@@ -30,6 +30,12 @@ export interface IMessageComposerProvider<T> {
     getMessageComposer(contractAddr: string): T;
 }
 export declare class ContractBase<TSign = IEmptyClient, TQuery = IEmptyClient, TMsgComposer = IEmptyClient> {
+    address: string | undefined;
+    cosmWasmClient: CosmWasmClient | undefined;
+    signingCosmWasmClient: SigningCosmWasmClient | undefined;
+    TSign?: new (client: SigningCosmWasmClient, sender: string, contractAddress: string) => TSign;
+    TQuery?: new (client: CosmWasmClient, contractAddress: string) => TQuery;
+    TMsgComposer?: new (sender: string, contractAddress: string) => TMsgComposer;
     constructor(address: string | undefined, cosmWasmClient: CosmWasmClient | undefined, signingCosmWasmClient: SigningCosmWasmClient | undefined, TSign?: new (client: SigningCosmWasmClient, sender: string, contractAddress: string) => TSign, TQuery?: new (client: CosmWasmClient, contractAddress: string) => TQuery, TMsgComposer?: new (sender: string, contractAddress: string) => TMsgComposer);
     getSigningClient(contractAddr: string): TSign;
     getQueryClient(contractAddr: string): TQuery;
