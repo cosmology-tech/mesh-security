@@ -15,6 +15,60 @@ TS library with Cosmos SDK and Mesh Security smart contracts.
 npm install mesh-security
 ```
 
+### Providers
+
+First, make sure to create a provider for the chain you want to use. You can use the `useChain` hook from `cosmos-kit` or pass in `address` and promises to return the query/signing clients:
+
+```tsx
+import { ContractsProvider } from 'mesh-security';
+import { useChain } from '@cosmos-kit/react';
+
+const ChainContractProvider = ({ chainName, children }: { chainName: string, children: any }) => {
+  const { address, getCosmWasmClient, getSigningCosmWasmClient } = useChain(chainName);
+  return (
+    <ContractsProvider contractsConfig={{
+      address,
+      getCosmWasmClient,
+      getSigningCosmWasmClient
+    }}>
+      {children}
+    </ContractsProvider>
+  );
+};
+```
+
+### Connected Components
+
+After you've created your provider, you can leverage the `useContracts` hook:
+
+
+```tsx
+import { useContracts } from 'mesh-security';
+import { useChain } from '@cosmos-kit/react';
+
+const ExampleComponent = ({chainName}:{chainName: string}) => {
+  const { converter, externalStaking, nativeStaking, simplePriceFeed } = useContracts();
+  const { address, status } = useChain(chainName);
+
+  let msg;
+  if (address && converter.cosmWasmClient) {
+    const composer = converter.getMessageComposer(converterAddr)
+    // do something with composer
+      console.log(composer);
+  } else if (nativeStaking.cosmWasmClient) {
+    const query = nativeStaking.getQueryClient(nativeStakingAddr);
+    // do somethign with query
+    console.log(query);
+  }
+
+  return (
+    <div>
+      {address}
+    </div>
+  );
+}
+```
+
 ### Cosmos SDK clients
 
 ```js
