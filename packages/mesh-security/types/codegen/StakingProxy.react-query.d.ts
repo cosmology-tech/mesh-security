@@ -16,7 +16,7 @@ export interface StakingProxyReactQuery<TResponse, TData = TResponse> {
 }
 export interface StakingProxyConfigQuery<TData> extends StakingProxyReactQuery<Config, TData> {
 }
-export declare function useStakingProxyConfigQuery<TData = Config>({ client, options }: StakingProxyConfigQuery<TData>): any;
+export declare function useStakingProxyConfigQuery<TData = Config>({ client, options }: StakingProxyConfigQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface StakingProxyReleaseUnbondedMutation {
     client: StakingProxyClient;
     args?: {
@@ -25,7 +25,7 @@ export interface StakingProxyReleaseUnbondedMutation {
         funds?: Coin[];
     };
 }
-export declare function useStakingProxyReleaseUnbondedMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyReleaseUnbondedMutation>, "mutationFn">): any;
+export declare function useStakingProxyReleaseUnbondedMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyReleaseUnbondedMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, StakingProxyReleaseUnbondedMutation, unknown>;
 export interface StakingProxyUnstakeMutation {
     client: StakingProxyClient;
     msg: {
@@ -38,7 +38,7 @@ export interface StakingProxyUnstakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useStakingProxyUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyUnstakeMutation>, "mutationFn">): any;
+export declare function useStakingProxyUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyUnstakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, StakingProxyUnstakeMutation, unknown>;
 export interface StakingProxyWithdrawRewardsMutation {
     client: StakingProxyClient;
     args?: {
@@ -47,7 +47,7 @@ export interface StakingProxyWithdrawRewardsMutation {
         funds?: Coin[];
     };
 }
-export declare function useStakingProxyWithdrawRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyWithdrawRewardsMutation>, "mutationFn">): any;
+export declare function useStakingProxyWithdrawRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyWithdrawRewardsMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, StakingProxyWithdrawRewardsMutation, unknown>;
 export interface StakingProxyVoteWeightedMutation {
     client: StakingProxyClient;
     msg: {
@@ -60,7 +60,7 @@ export interface StakingProxyVoteWeightedMutation {
         funds?: Coin[];
     };
 }
-export declare function useStakingProxyVoteWeightedMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyVoteWeightedMutation>, "mutationFn">): any;
+export declare function useStakingProxyVoteWeightedMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyVoteWeightedMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, StakingProxyVoteWeightedMutation, unknown>;
 export interface StakingProxyVoteMutation {
     client: StakingProxyClient;
     msg: {
@@ -73,7 +73,7 @@ export interface StakingProxyVoteMutation {
         funds?: Coin[];
     };
 }
-export declare function useStakingProxyVoteMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyVoteMutation>, "mutationFn">): any;
+export declare function useStakingProxyVoteMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyVoteMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, StakingProxyVoteMutation, unknown>;
 export interface StakingProxyRestakeMutation {
     client: StakingProxyClient;
     msg: {
@@ -87,7 +87,7 @@ export interface StakingProxyRestakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useStakingProxyRestakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyRestakeMutation>, "mutationFn">): any;
+export declare function useStakingProxyRestakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyRestakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, StakingProxyRestakeMutation, unknown>;
 export interface StakingProxyStakeMutation {
     client: StakingProxyClient;
     msg: {
@@ -99,4 +99,4 @@ export interface StakingProxyStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useStakingProxyStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyStakeMutation>, "mutationFn">): any;
+export declare function useStakingProxyStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, StakingProxyStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, StakingProxyStakeMutation, unknown>;

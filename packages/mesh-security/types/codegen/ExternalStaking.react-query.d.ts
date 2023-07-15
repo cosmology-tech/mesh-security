@@ -21,27 +21,27 @@ export interface ExternalStakingAllPendingRewardsQuery<TData> extends ExternalSt
         user: string;
     };
 }
-export declare function useExternalStakingAllPendingRewardsQuery<TData = AllPendingRewards>({ client, args, options }: ExternalStakingAllPendingRewardsQuery<TData>): any;
+export declare function useExternalStakingAllPendingRewardsQuery<TData = AllPendingRewards>({ client, args, options }: ExternalStakingAllPendingRewardsQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingPendingRewardsQuery<TData> extends ExternalStakingReactQuery<MaybePendingRewards, TData> {
     args: {
         user: string;
         validator: string;
     };
 }
-export declare function useExternalStakingPendingRewardsQuery<TData = MaybePendingRewards>({ client, args, options }: ExternalStakingPendingRewardsQuery<TData>): any;
+export declare function useExternalStakingPendingRewardsQuery<TData = MaybePendingRewards>({ client, args, options }: ExternalStakingPendingRewardsQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingAllPendingTxsDescQuery<TData> extends ExternalStakingReactQuery<AllTxsResponse, TData> {
     args: {
         limit?: number;
         startAfter?: number;
     };
 }
-export declare function useExternalStakingAllPendingTxsDescQuery<TData = AllTxsResponse>({ client, args, options }: ExternalStakingAllPendingTxsDescQuery<TData>): any;
+export declare function useExternalStakingAllPendingTxsDescQuery<TData = AllTxsResponse>({ client, args, options }: ExternalStakingAllPendingTxsDescQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingPendingTxQuery<TData> extends ExternalStakingReactQuery<Tx, TData> {
     args: {
         txId: number;
     };
 }
-export declare function useExternalStakingPendingTxQuery<TData = Tx>({ client, args, options }: ExternalStakingPendingTxQuery<TData>): any;
+export declare function useExternalStakingPendingTxQuery<TData = Tx>({ client, args, options }: ExternalStakingPendingTxQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingStakesQuery<TData> extends ExternalStakingReactQuery<StakesResponse, TData> {
     args: {
         limit?: number;
@@ -49,33 +49,33 @@ export interface ExternalStakingStakesQuery<TData> extends ExternalStakingReactQ
         user: string;
     };
 }
-export declare function useExternalStakingStakesQuery<TData = StakesResponse>({ client, args, options }: ExternalStakingStakesQuery<TData>): any;
+export declare function useExternalStakingStakesQuery<TData = StakesResponse>({ client, args, options }: ExternalStakingStakesQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingStakeQuery<TData> extends ExternalStakingReactQuery<Stake, TData> {
     args: {
         user: string;
         validator: string;
     };
 }
-export declare function useExternalStakingStakeQuery<TData = Stake>({ client, args, options }: ExternalStakingStakeQuery<TData>): any;
+export declare function useExternalStakingStakeQuery<TData = Stake>({ client, args, options }: ExternalStakingStakeQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingListRemoteValidatorsQuery<TData> extends ExternalStakingReactQuery<ListRemoteValidatorsResponse, TData> {
     args: {
         limit?: number;
         startAfter?: string;
     };
 }
-export declare function useExternalStakingListRemoteValidatorsQuery<TData = ListRemoteValidatorsResponse>({ client, args, options }: ExternalStakingListRemoteValidatorsQuery<TData>): any;
+export declare function useExternalStakingListRemoteValidatorsQuery<TData = ListRemoteValidatorsResponse>({ client, args, options }: ExternalStakingListRemoteValidatorsQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingIbcChannelQuery<TData> extends ExternalStakingReactQuery<IbcChannelResponse, TData> {
 }
-export declare function useExternalStakingIbcChannelQuery<TData = IbcChannelResponse>({ client, options }: ExternalStakingIbcChannelQuery<TData>): any;
+export declare function useExternalStakingIbcChannelQuery<TData = IbcChannelResponse>({ client, options }: ExternalStakingIbcChannelQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingAuthorizedEndpointQuery<TData> extends ExternalStakingReactQuery<AuthorizedEndpoint, TData> {
 }
-export declare function useExternalStakingAuthorizedEndpointQuery<TData = AuthorizedEndpoint>({ client, options }: ExternalStakingAuthorizedEndpointQuery<TData>): any;
+export declare function useExternalStakingAuthorizedEndpointQuery<TData = AuthorizedEndpoint>({ client, options }: ExternalStakingAuthorizedEndpointQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingConfigQuery<TData> extends ExternalStakingReactQuery<ConfigResponse, TData> {
 }
-export declare function useExternalStakingConfigQuery<TData = ConfigResponse>({ client, options }: ExternalStakingConfigQuery<TData>): any;
+export declare function useExternalStakingConfigQuery<TData = ConfigResponse>({ client, options }: ExternalStakingConfigQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingMaxSlashQuery<TData> extends ExternalStakingReactQuery<MaxSlashResponse, TData> {
 }
-export declare function useExternalStakingMaxSlashQuery<TData = MaxSlashResponse>({ client, options }: ExternalStakingMaxSlashQuery<TData>): any;
+export declare function useExternalStakingMaxSlashQuery<TData = MaxSlashResponse>({ client, options }: ExternalStakingMaxSlashQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ExternalStakingTestRollbackWithdrawRewardsMutation {
     client: ExternalStakingClient;
     msg: {
@@ -87,7 +87,7 @@ export interface ExternalStakingTestRollbackWithdrawRewardsMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingTestRollbackWithdrawRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestRollbackWithdrawRewardsMutation>, "mutationFn">): any;
+export declare function useExternalStakingTestRollbackWithdrawRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestRollbackWithdrawRewardsMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingTestRollbackWithdrawRewardsMutation, unknown>;
 export interface ExternalStakingTestCommitWithdrawRewardsMutation {
     client: ExternalStakingClient;
     msg: {
@@ -99,7 +99,7 @@ export interface ExternalStakingTestCommitWithdrawRewardsMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingTestCommitWithdrawRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestCommitWithdrawRewardsMutation>, "mutationFn">): any;
+export declare function useExternalStakingTestCommitWithdrawRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestCommitWithdrawRewardsMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingTestCommitWithdrawRewardsMutation, unknown>;
 export interface ExternalStakingWithdrawRewardsMutation {
     client: ExternalStakingClient;
     msg: {
@@ -112,7 +112,7 @@ export interface ExternalStakingWithdrawRewardsMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingWithdrawRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingWithdrawRewardsMutation>, "mutationFn">): any;
+export declare function useExternalStakingWithdrawRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingWithdrawRewardsMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingWithdrawRewardsMutation, unknown>;
 export interface ExternalStakingTestDistributeRewardsMutation {
     client: ExternalStakingClient;
     msg: {
@@ -125,7 +125,7 @@ export interface ExternalStakingTestDistributeRewardsMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingTestDistributeRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestDistributeRewardsMutation>, "mutationFn">): any;
+export declare function useExternalStakingTestDistributeRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestDistributeRewardsMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingTestDistributeRewardsMutation, unknown>;
 export interface ExternalStakingWithdrawUnbondedMutation {
     client: ExternalStakingClient;
     args?: {
@@ -134,7 +134,7 @@ export interface ExternalStakingWithdrawUnbondedMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingWithdrawUnbondedMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingWithdrawUnbondedMutation>, "mutationFn">): any;
+export declare function useExternalStakingWithdrawUnbondedMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingWithdrawUnbondedMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingWithdrawUnbondedMutation, unknown>;
 export interface ExternalStakingTestRollbackUnstakeMutation {
     client: ExternalStakingClient;
     msg: {
@@ -146,7 +146,7 @@ export interface ExternalStakingTestRollbackUnstakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingTestRollbackUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestRollbackUnstakeMutation>, "mutationFn">): any;
+export declare function useExternalStakingTestRollbackUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestRollbackUnstakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingTestRollbackUnstakeMutation, unknown>;
 export interface ExternalStakingTestCommitUnstakeMutation {
     client: ExternalStakingClient;
     msg: {
@@ -158,7 +158,7 @@ export interface ExternalStakingTestCommitUnstakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingTestCommitUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestCommitUnstakeMutation>, "mutationFn">): any;
+export declare function useExternalStakingTestCommitUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestCommitUnstakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingTestCommitUnstakeMutation, unknown>;
 export interface ExternalStakingUnstakeMutation {
     client: ExternalStakingClient;
     msg: {
@@ -171,7 +171,7 @@ export interface ExternalStakingUnstakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingUnstakeMutation>, "mutationFn">): any;
+export declare function useExternalStakingUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingUnstakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingUnstakeMutation, unknown>;
 export interface ExternalStakingTestSetActiveValidatorMutation {
     client: ExternalStakingClient;
     msg: {
@@ -183,7 +183,7 @@ export interface ExternalStakingTestSetActiveValidatorMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingTestSetActiveValidatorMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestSetActiveValidatorMutation>, "mutationFn">): any;
+export declare function useExternalStakingTestSetActiveValidatorMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestSetActiveValidatorMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingTestSetActiveValidatorMutation, unknown>;
 export interface ExternalStakingTestRollbackStakeMutation {
     client: ExternalStakingClient;
     msg: {
@@ -195,7 +195,7 @@ export interface ExternalStakingTestRollbackStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingTestRollbackStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestRollbackStakeMutation>, "mutationFn">): any;
+export declare function useExternalStakingTestRollbackStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestRollbackStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingTestRollbackStakeMutation, unknown>;
 export interface ExternalStakingTestCommitStakeMutation {
     client: ExternalStakingClient;
     msg: {
@@ -207,7 +207,7 @@ export interface ExternalStakingTestCommitStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingTestCommitStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestCommitStakeMutation>, "mutationFn">): any;
+export declare function useExternalStakingTestCommitStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingTestCommitStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingTestCommitStakeMutation, unknown>;
 export interface ExternalStakingReceiveVirtualStakeMutation {
     client: ExternalStakingClient;
     msg: {
@@ -222,4 +222,4 @@ export interface ExternalStakingReceiveVirtualStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useExternalStakingReceiveVirtualStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingReceiveVirtualStakeMutation>, "mutationFn">): any;
+export declare function useExternalStakingReceiveVirtualStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ExternalStakingReceiveVirtualStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ExternalStakingReceiveVirtualStakeMutation, unknown>;

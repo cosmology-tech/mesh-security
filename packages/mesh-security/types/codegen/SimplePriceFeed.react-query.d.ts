@@ -16,10 +16,10 @@ export interface SimplePriceFeedReactQuery<TResponse, TData = TResponse> {
 }
 export interface SimplePriceFeedConfigQuery<TData> extends SimplePriceFeedReactQuery<ConfigResponse, TData> {
 }
-export declare function useSimplePriceFeedConfigQuery<TData = ConfigResponse>({ client, options }: SimplePriceFeedConfigQuery<TData>): any;
+export declare function useSimplePriceFeedConfigQuery<TData = ConfigResponse>({ client, options }: SimplePriceFeedConfigQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface SimplePriceFeedPriceQuery<TData> extends SimplePriceFeedReactQuery<PriceResponse, TData> {
 }
-export declare function useSimplePriceFeedPriceQuery<TData = PriceResponse>({ client, options }: SimplePriceFeedPriceQuery<TData>): any;
+export declare function useSimplePriceFeedPriceQuery<TData = PriceResponse>({ client, options }: SimplePriceFeedPriceQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface SimplePriceFeedUpdatePriceMutation {
     client: SimplePriceFeedClient;
     msg: {
@@ -31,4 +31,4 @@ export interface SimplePriceFeedUpdatePriceMutation {
         funds?: Coin[];
     };
 }
-export declare function useSimplePriceFeedUpdatePriceMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, SimplePriceFeedUpdatePriceMutation>, "mutationFn">): any;
+export declare function useSimplePriceFeedUpdatePriceMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, SimplePriceFeedUpdatePriceMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, SimplePriceFeedUpdatePriceMutation, unknown>;

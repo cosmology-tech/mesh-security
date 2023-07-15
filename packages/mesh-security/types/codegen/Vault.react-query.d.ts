@@ -20,13 +20,13 @@ export interface VaultAllPendingTxsDescQuery<TData> extends VaultReactQuery<AllT
         startAfter?: number;
     };
 }
-export declare function useVaultAllPendingTxsDescQuery<TData = AllTxsResponse>({ client, args, options }: VaultAllPendingTxsDescQuery<TData>): any;
+export declare function useVaultAllPendingTxsDescQuery<TData = AllTxsResponse>({ client, args, options }: VaultAllPendingTxsDescQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface VaultPendingTxQuery<TData> extends VaultReactQuery<Tx, TData> {
     args: {
         txId: number;
     };
 }
-export declare function useVaultPendingTxQuery<TData = Tx>({ client, args, options }: VaultPendingTxQuery<TData>): any;
+export declare function useVaultPendingTxQuery<TData = Tx>({ client, args, options }: VaultPendingTxQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface VaultAllAccountsQuery<TData> extends VaultReactQuery<AllAccountsResponse, TData> {
     args: {
         limit?: number;
@@ -34,7 +34,7 @@ export interface VaultAllAccountsQuery<TData> extends VaultReactQuery<AllAccount
         withCollateral: boolean;
     };
 }
-export declare function useVaultAllAccountsQuery<TData = AllAccountsResponse>({ client, args, options }: VaultAllAccountsQuery<TData>): any;
+export declare function useVaultAllAccountsQuery<TData = AllAccountsResponse>({ client, args, options }: VaultAllAccountsQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface VaultAccountClaimsQuery<TData> extends VaultReactQuery<AccountClaimsResponse, TData> {
     args: {
         account: string;
@@ -42,23 +42,23 @@ export interface VaultAccountClaimsQuery<TData> extends VaultReactQuery<AccountC
         startAfter?: string;
     };
 }
-export declare function useVaultAccountClaimsQuery<TData = AccountClaimsResponse>({ client, args, options }: VaultAccountClaimsQuery<TData>): any;
+export declare function useVaultAccountClaimsQuery<TData = AccountClaimsResponse>({ client, args, options }: VaultAccountClaimsQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface VaultClaimQuery<TData> extends VaultReactQuery<Lien, TData> {
     args: {
         account: string;
         lienholder: string;
     };
 }
-export declare function useVaultClaimQuery<TData = Lien>({ client, args, options }: VaultClaimQuery<TData>): any;
+export declare function useVaultClaimQuery<TData = Lien>({ client, args, options }: VaultClaimQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface VaultConfigQuery<TData> extends VaultReactQuery<ConfigResponse, TData> {
 }
-export declare function useVaultConfigQuery<TData = ConfigResponse>({ client, options }: VaultConfigQuery<TData>): any;
+export declare function useVaultConfigQuery<TData = ConfigResponse>({ client, options }: VaultConfigQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface VaultAccountQuery<TData> extends VaultReactQuery<MaybeAccountResponse, TData> {
     args: {
         account: string;
     };
 }
-export declare function useVaultAccountQuery<TData = MaybeAccountResponse>({ client, args, options }: VaultAccountQuery<TData>): any;
+export declare function useVaultAccountQuery<TData = MaybeAccountResponse>({ client, args, options }: VaultAccountQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface VaultStakeLocalMutation {
     client: VaultClient;
     msg: {
@@ -71,7 +71,7 @@ export interface VaultStakeLocalMutation {
         funds?: Coin[];
     };
 }
-export declare function useVaultStakeLocalMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultStakeLocalMutation>, "mutationFn">): any;
+export declare function useVaultStakeLocalMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultStakeLocalMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VaultStakeLocalMutation, unknown>;
 export interface VaultStakeRemoteMutation {
     client: VaultClient;
     msg: {
@@ -85,7 +85,7 @@ export interface VaultStakeRemoteMutation {
         funds?: Coin[];
     };
 }
-export declare function useVaultStakeRemoteMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultStakeRemoteMutation>, "mutationFn">): any;
+export declare function useVaultStakeRemoteMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultStakeRemoteMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VaultStakeRemoteMutation, unknown>;
 export interface VaultUnbondMutation {
     client: VaultClient;
     msg: {
@@ -97,7 +97,7 @@ export interface VaultUnbondMutation {
         funds?: Coin[];
     };
 }
-export declare function useVaultUnbondMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultUnbondMutation>, "mutationFn">): any;
+export declare function useVaultUnbondMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultUnbondMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VaultUnbondMutation, unknown>;
 export interface VaultBondMutation {
     client: VaultClient;
     args?: {
@@ -106,7 +106,7 @@ export interface VaultBondMutation {
         funds?: Coin[];
     };
 }
-export declare function useVaultBondMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultBondMutation>, "mutationFn">): any;
+export declare function useVaultBondMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultBondMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VaultBondMutation, unknown>;
 export interface VaultRollbackTxMutation {
     client: VaultClient;
     msg: {
@@ -118,7 +118,7 @@ export interface VaultRollbackTxMutation {
         funds?: Coin[];
     };
 }
-export declare function useVaultRollbackTxMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultRollbackTxMutation>, "mutationFn">): any;
+export declare function useVaultRollbackTxMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultRollbackTxMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VaultRollbackTxMutation, unknown>;
 export interface VaultCommitTxMutation {
     client: VaultClient;
     msg: {
@@ -130,7 +130,7 @@ export interface VaultCommitTxMutation {
         funds?: Coin[];
     };
 }
-export declare function useVaultCommitTxMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultCommitTxMutation>, "mutationFn">): any;
+export declare function useVaultCommitTxMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultCommitTxMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VaultCommitTxMutation, unknown>;
 export interface VaultReleaseLocalStakeMutation {
     client: VaultClient;
     msg: {
@@ -142,7 +142,7 @@ export interface VaultReleaseLocalStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useVaultReleaseLocalStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultReleaseLocalStakeMutation>, "mutationFn">): any;
+export declare function useVaultReleaseLocalStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultReleaseLocalStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VaultReleaseLocalStakeMutation, unknown>;
 export interface VaultReleaseCrossStakeMutation {
     client: VaultClient;
     msg: {
@@ -155,4 +155,4 @@ export interface VaultReleaseCrossStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useVaultReleaseCrossStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultReleaseCrossStakeMutation>, "mutationFn">): any;
+export declare function useVaultReleaseCrossStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VaultReleaseCrossStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VaultReleaseCrossStakeMutation, unknown>;

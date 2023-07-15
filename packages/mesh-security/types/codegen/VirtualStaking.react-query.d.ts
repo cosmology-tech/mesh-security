@@ -16,7 +16,7 @@ export interface VirtualStakingReactQuery<TResponse, TData = TResponse> {
 }
 export interface VirtualStakingConfigQuery<TData> extends VirtualStakingReactQuery<ConfigResponse, TData> {
 }
-export declare function useVirtualStakingConfigQuery<TData = ConfigResponse>({ client, options }: VirtualStakingConfigQuery<TData>): any;
+export declare function useVirtualStakingConfigQuery<TData = ConfigResponse>({ client, options }: VirtualStakingConfigQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface VirtualStakingUnbondMutation {
     client: VirtualStakingClient;
     msg: {
@@ -29,7 +29,7 @@ export interface VirtualStakingUnbondMutation {
         funds?: Coin[];
     };
 }
-export declare function useVirtualStakingUnbondMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VirtualStakingUnbondMutation>, "mutationFn">): any;
+export declare function useVirtualStakingUnbondMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VirtualStakingUnbondMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VirtualStakingUnbondMutation, unknown>;
 export interface VirtualStakingBondMutation {
     client: VirtualStakingClient;
     msg: {
@@ -42,4 +42,4 @@ export interface VirtualStakingBondMutation {
         funds?: Coin[];
     };
 }
-export declare function useVirtualStakingBondMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VirtualStakingBondMutation>, "mutationFn">): any;
+export declare function useVirtualStakingBondMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, VirtualStakingBondMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, VirtualStakingBondMutation, unknown>;

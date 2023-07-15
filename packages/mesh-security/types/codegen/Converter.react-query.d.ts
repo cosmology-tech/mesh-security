@@ -16,7 +16,7 @@ export interface ConverterReactQuery<TResponse, TData = TResponse> {
 }
 export interface ConverterConfigQuery<TData> extends ConverterReactQuery<ConfigResponse, TData> {
 }
-export declare function useConverterConfigQuery<TData = ConfigResponse>({ client, options }: ConverterConfigQuery<TData>): any;
+export declare function useConverterConfigQuery<TData = ConfigResponse>({ client, options }: ConverterConfigQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface ConverterTestUnstakeMutation {
     client: ConverterClient;
     msg: {
@@ -29,7 +29,7 @@ export interface ConverterTestUnstakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useConverterTestUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ConverterTestUnstakeMutation>, "mutationFn">): any;
+export declare function useConverterTestUnstakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ConverterTestUnstakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ConverterTestUnstakeMutation, unknown>;
 export interface ConverterTestStakeMutation {
     client: ConverterClient;
     msg: {
@@ -42,7 +42,7 @@ export interface ConverterTestStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useConverterTestStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ConverterTestStakeMutation>, "mutationFn">): any;
+export declare function useConverterTestStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ConverterTestStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ConverterTestStakeMutation, unknown>;
 export interface ConverterDistributeRewardsMutation {
     client: ConverterClient;
     msg: {
@@ -54,7 +54,7 @@ export interface ConverterDistributeRewardsMutation {
         funds?: Coin[];
     };
 }
-export declare function useConverterDistributeRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ConverterDistributeRewardsMutation>, "mutationFn">): any;
+export declare function useConverterDistributeRewardsMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ConverterDistributeRewardsMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ConverterDistributeRewardsMutation, unknown>;
 export interface ConverterDistributeRewardMutation {
     client: ConverterClient;
     msg: {
@@ -66,4 +66,4 @@ export interface ConverterDistributeRewardMutation {
         funds?: Coin[];
     };
 }
-export declare function useConverterDistributeRewardMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ConverterDistributeRewardMutation>, "mutationFn">): any;
+export declare function useConverterDistributeRewardMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, ConverterDistributeRewardMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, ConverterDistributeRewardMutation, unknown>;

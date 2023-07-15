@@ -5,6 +5,7 @@
 */
 import React from 'react';
 import { CosmWasmClient, SigningCosmWasmClient } from '@cosmjs/cosmwasm-stargate';
+import { IContractsContext } from './contractContextProviders';
 interface ContractsConfig {
     address: string | undefined;
     getCosmWasmClient: () => Promise<CosmWasmClient>;
@@ -14,5 +15,5 @@ export declare const ContractsProvider: ({ children, contractsConfig, }: {
     children: React.ReactNode;
     contractsConfig: ContractsConfig;
 }) => any;
-export declare const useContracts: () => any;
+export declare const useContracts: () => IContractsContext;
 export {};

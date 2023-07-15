@@ -19,19 +19,19 @@ export interface NativeStakingOwnerByProxyQuery<TData> extends NativeStakingReac
         proxy: string;
     };
 }
-export declare function useNativeStakingOwnerByProxyQuery<TData = OwnerByProxyResponse>({ client, args, options }: NativeStakingOwnerByProxyQuery<TData>): any;
+export declare function useNativeStakingOwnerByProxyQuery<TData = OwnerByProxyResponse>({ client, args, options }: NativeStakingOwnerByProxyQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface NativeStakingProxyByOwnerQuery<TData> extends NativeStakingReactQuery<ProxyByOwnerResponse, TData> {
     args: {
         owner: string;
     };
 }
-export declare function useNativeStakingProxyByOwnerQuery<TData = ProxyByOwnerResponse>({ client, args, options }: NativeStakingProxyByOwnerQuery<TData>): any;
+export declare function useNativeStakingProxyByOwnerQuery<TData = ProxyByOwnerResponse>({ client, args, options }: NativeStakingProxyByOwnerQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface NativeStakingConfigQuery<TData> extends NativeStakingReactQuery<Config, TData> {
 }
-export declare function useNativeStakingConfigQuery<TData = Config>({ client, options }: NativeStakingConfigQuery<TData>): any;
+export declare function useNativeStakingConfigQuery<TData = Config>({ client, options }: NativeStakingConfigQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface NativeStakingMaxSlashQuery<TData> extends NativeStakingReactQuery<MaxSlashResponse, TData> {
 }
-export declare function useNativeStakingMaxSlashQuery<TData = MaxSlashResponse>({ client, options }: NativeStakingMaxSlashQuery<TData>): any;
+export declare function useNativeStakingMaxSlashQuery<TData = MaxSlashResponse>({ client, options }: NativeStakingMaxSlashQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
 export interface NativeStakingReleaseProxyStakeMutation {
     client: NativeStakingClient;
     args?: {
@@ -40,7 +40,7 @@ export interface NativeStakingReleaseProxyStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useNativeStakingReleaseProxyStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, NativeStakingReleaseProxyStakeMutation>, "mutationFn">): any;
+export declare function useNativeStakingReleaseProxyStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, NativeStakingReleaseProxyStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, NativeStakingReleaseProxyStakeMutation, unknown>;
 export interface NativeStakingReceiveStakeMutation {
     client: NativeStakingClient;
     msg: {
@@ -53,4 +53,4 @@ export interface NativeStakingReceiveStakeMutation {
         funds?: Coin[];
     };
 }
-export declare function useNativeStakingReceiveStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, NativeStakingReceiveStakeMutation>, "mutationFn">): any;
+export declare function useNativeStakingReceiveStakeMutation(options?: Omit<UseMutationOptions<ExecuteResult, Error, NativeStakingReceiveStakeMutation>, "mutationFn">): import("@tanstack/react-query").UseMutationResult<ExecuteResult, Error, NativeStakingReceiveStakeMutation, unknown>;
