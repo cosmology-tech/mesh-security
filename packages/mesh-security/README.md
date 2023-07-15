@@ -55,9 +55,16 @@ const ExampleComponent = ({chainName}:{chainName: string}) => {
     const composer = converter.getMessageComposer(converterAddr)
     // do something with composer
       console.log(composer);
+
+    // do something with a signing client from simplePriceFeed
+    const feed = simplePriceFeed.getSigningClient(feedAddr);
+    feed.updatePrice({
+      nativePerForeign: 'something...'
+    })
+
   } else if (nativeStaking.cosmWasmClient) {
     const query = nativeStaking.getQueryClient(nativeStakingAddr);
-    // do somethign with query
+    // do something with query client from nativeStaking
     console.log(query);
   }
 
