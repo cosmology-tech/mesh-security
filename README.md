@@ -5,7 +5,7 @@
 </p>
 
 <p align="center" width="100%">
-   <a href="https://github.com/pyramation/mesh-security/blob/main/LICENSE"><img height="20" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+   <a href="https://github.com/cosmology-tech/mesh-security/blob/main/LICENSE"><img height="20" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
 
 Typescript libraries for Mesh Security.

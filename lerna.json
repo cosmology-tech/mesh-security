@@ -13,7 +13,7 @@
   "registry": "https://registry.npmjs.org",
   "command": {
     "create": {
-      "homepage": "https://github.com/pyramation/mesh-security",
+      "homepage": "https://github.com/cosmology-tech/mesh-security",
       "license": "SEE LICENSE IN LICENSE",
       "access": "restricted"
     },
