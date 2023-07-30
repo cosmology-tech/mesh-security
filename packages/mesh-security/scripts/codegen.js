@@ -1,5 +1,5 @@
 import { join, resolve } from 'path';
-import telescope from '@osmonauts/telescope';
+import telescope from '@cosmology/telescope';
 
 const protoDirs = [join(__dirname, '/../proto')];
 const meshSecurityDir = resolve(
